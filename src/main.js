@@ -5,9 +5,10 @@ import App from './App'
 import router from './router'
 // 解决移动端300ms点击延迟问题
 import fastclick from 'fastclick'
-import './assets/styles/reset.css'
+import 'styles/reset.css'
 // 解决移动端1像素边框问题
-import './assets/styles/border.css'
+import 'styles/border.css'
+import 'styles/iconfont.css'
 
 Vue.config.productionTip = false
 fastclick.attach(document.body)
