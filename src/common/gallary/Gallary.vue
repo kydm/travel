@@ -1,7 +1,7 @@
 <template>
   <div class="container" @click="handleGallaryClick" @touchmove.prevent @mousewheel.prevent>
     <div class="wrapper">
-      <swiper :options="swiperOption">
+      <swiper :options="swiperOption" v-if="showSwiper">
         <swiper-slide v-for="(item, index) of imgs" :key="index">
           <img class="swiper-img" :src="item">
         </swiper-slide>
@@ -32,6 +32,11 @@ export default {
         observer: true,
         observeParents: true
       }
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.imgs.length
     }
   },
   methods: {
